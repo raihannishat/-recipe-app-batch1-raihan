@@ -1,0 +1,17 @@
+<div class="favourites-container">
+  <h2>Your Favourites</h2>
+
+  @if (favourites.length > 0) {
+    <div class="recipes-grid">
+      @for (recipe of favourites; track recipe.id) {
+        <app-recipe-card 
+          [recipe]="recipe" 
+          [isSaved]="isSaved(recipe)"
+          (save)="onSave($event)" 
+        />
+      }
+    </div>
+  } @else {
+    <p class="empty-message">No saved recipes yet. Go explore some recipes!</p>
+  }
+</div>

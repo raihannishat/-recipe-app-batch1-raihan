@@ -1,0 +1,16 @@
+.favourites-container {
+  padding: 20px;
+}
+
+.recipes-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.empty-message {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-top: 50px;
+}

@@ -1,0 +1,29 @@
+.doc-toolbar {
+  background: #f3c6cf; // তুমি চাইলে theme override
+  color: #7a1f2b;
+}
+
+/* spacer is official Material flex trick */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* ONLY spacing fix for buttons */
+.doc-toolbar button {
+  margin-left: 8px;
+}
+
+/* first button avoid extra margin */
+.doc-toolbar button:first-of-type {
+  margin-left: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 8px; /* Material-friendly spacing */
+}
+
+.active-link {
+  background-color: rgba(122, 31, 43, 0.1);
+  font-weight: bold;
+}

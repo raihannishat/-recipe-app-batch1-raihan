@@ -1,0 +1,26 @@
+.recipe-card {
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  margin-bottom: 20px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.long-prep {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.short-prep {
+  color: #388e3c;
+  font-weight: 500;
+}

@@ -1,0 +1,24 @@
+<div class="home-container">
+  <div class="filters">
+    <button mat-flat-button [color]="currentCategory === null ? 'primary' : ''" (click)="filterByCategory(null)">
+      All
+    </button>
+    @for (category of categories; track category) {
+      <button mat-flat-button [color]="currentCategory === category ? 'primary' : ''" (click)="filterByCategory(category)">
+        {{ category }}
+      </button>
+    }
+  </div>
+
+  <div class="recipes-grid">
+    @for (recipe of filteredRecipes; track recipe.id) {
+      <app-recipe-card 
+        [recipe]="recipe" 
+        [isSaved]="isSaved(recipe)"
+        (save)="onSave($event)" 
+      />
+    } @empty {
+      <p>No recipes found.</p>
+    }
+  </div>
+</div>
